@@ -24,36 +24,40 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  # 附带第三方字体官方许可协议(随应用打包,满足字体许可的保留要求)
+  assets:
+    - assets/fonts/HarmonyOS_Sans/LICENSE
+    - assets/fonts/MiSans/LICENSE
   fonts:
     - family: HarmonyOS Sans
       fonts:
-        - asset: assets/fonts/HarmonyOS_Sans_Thin.ttf
+        - asset: assets/fonts/HarmonyOS_Sans/HarmonyOS_Sans_Thin.ttf
           weight: 100
-        - asset: assets/fonts/HarmonyOS_Sans_Light.ttf
+        - asset: assets/fonts/HarmonyOS_Sans/HarmonyOS_Sans_Light.ttf
           weight: 300
-        - asset: assets/fonts/HarmonyOS_Sans_Regular.ttf
+        - asset: assets/fonts/HarmonyOS_Sans/HarmonyOS_Sans_Regular.ttf
           weight: 400
-        - asset: assets/fonts/HarmonyOS_Sans_Medium.ttf
+        - asset: assets/fonts/HarmonyOS_Sans/HarmonyOS_Sans_Medium.ttf
           weight: 500
-        - asset: assets/fonts/HarmonyOS_Sans_Bold.ttf
+        - asset: assets/fonts/HarmonyOS_Sans/HarmonyOS_Sans_Bold.ttf
           weight: 700
-        - asset: assets/fonts/HarmonyOS_Sans_Black.ttf
+        - asset: assets/fonts/HarmonyOS_Sans/HarmonyOS_Sans_Black.ttf
           weight: 900
     - family: MiSans
       fonts:
-        - asset: assets/fonts/MiSansLatin-Thin.ttf
+        - asset: assets/fonts/MiSans/MiSansLatin-Thin.ttf
           weight: 100
-        - asset: assets/fonts/MiSansLatin-ExtraLight.ttf
+        - asset: assets/fonts/MiSans/MiSansLatin-ExtraLight.ttf
           weight: 200
-        - asset: assets/fonts/MiSansLatin-Light.ttf
+        - asset: assets/fonts/MiSans/MiSansLatin-Light.ttf
           weight: 300
-        - asset: assets/fonts/MiSansLatin-Regular.ttf
+        - asset: assets/fonts/MiSans/MiSansLatin-Regular.ttf
           weight: 400
-        - asset: assets/fonts/MiSansLatin-Medium.ttf
+        - asset: assets/fonts/MiSans/MiSansLatin-Medium.ttf
           weight: 500
-        - asset: assets/fonts/MiSansLatin-Demibold.ttf
+        - asset: assets/fonts/MiSans/MiSansLatin-Demibold.ttf
           weight: 600
-        - asset: assets/fonts/MiSansLatin-Bold.ttf
+        - asset: assets/fonts/MiSans/MiSansLatin-Bold.ttf
           weight: 700
-        - asset: assets/fonts/MiSansLatin-Heavy.ttf
+        - asset: assets/fonts/MiSans/MiSansLatin-Heavy.ttf
           weight: 900

@@ -95,4 +95,6 @@ lib/
 
 ## 🙏 致谢
 - 配色灵感参考 [zhongguose.com](https://zhongguose.com)
-- HarmonyOS Sans、MiSans 字体版权归原厂商所有
+- 内置字体版权归原厂商所有,官方许可协议随源码附于 `assets/fonts/` 下:
+  - **HarmonyOS Sans**(华为,HarmonyOS Sans Fonts License Agreement,见 `assets/fonts/HarmonyOS_Sans/LICENSE`)
+  - **MiSans**(小米,MiSans Font Intellectual Property License Agreement,见 `assets/fonts/MiSans/LICENSE`)
