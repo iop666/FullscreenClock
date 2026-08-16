@@ -1,7 +1,7 @@
 # FullscreenClock
 全屏时钟
 
-一个专注于查看时间的极简全屏时钟应用。支持 **Android** 与 **Windows (x64)**,提供标准数字时钟与圆盘(表盘)时钟,深/浅主题、丰富配色、多字体与沉浸式全屏体验。
+一个从"极简全屏时钟"进化到「**时钟 + 日程管理**」一体的跨平台应用,支持 **Android** 与 **Windows (x64)**。
 
 ## ✨ 功能特性
 
@@ -37,81 +37,100 @@
 - 内置 **5 类字体**:默认、等宽、衬线、HarmonyOS Sans、MiSans
 - 支持 **运行时导入** .ttf / .otf 自定义字体,无需重新编译
 
-### 🎛️ 显示与交互
-- 时钟缩放 **10%~1000%**,字体粗细 100~900
-- 屏幕常亮(唤醒锁),长时间查看不断屏
-- 点击屏幕进入设置,所有设置**实时生效并自动持久化**
+### 📅 计划管理(核心)
+
+<img width="1162" height="903" alt="image" src="https://github.com/user-attachments/assets/439bd1c6-9496-4715-bdad-9e5ef7df734d" />
+
+- **三级标签**:类型 → 主题 → 单元,结构化分类与检索
+- **完整状态机**:未开始 → 进行中 → 暂停 → 超时 → 完成 / 跳过,支持撤销
+- **冲突拦截**:同一时间段不允许并存计划(新建 / 编辑 / 提前延后 / 导入均拦截)
+- **自动顺延**:当前计划进行中时,后续计划自动顺延、不被误启动
+- **候选清单**:类型 → 主题 → 单元 → 标题四层结构,文件管理器式逐级浏览、按层级添加、导入 / 粘贴导入 / 导出
+- **计划列表 / 查看全部**:今日 / 明日 / 本周 / 本月,三级筛选 + 搜索 + 日期
+- **通知系统**:开始 / 超时 / 提前提醒、常驻通知(预计结束 + 下一计划)、精确闹钟、灵动岛兼容
+- **统计与历史**:完成率、实际投入、历史记录、导出统计报告
+- **AI 辅助**:一键生成计划 JSON / 候选清单 JSON 的规范提示词
+
+### 🎛️ 主界面计划显示
+
+<img width="1847" height="1015" alt="image" src="https://github.com/user-attachments/assets/2daf1b13-d05e-476e-859b-db75a7e778e2" />
+
+<img width="1963" height="995" alt="image" src="https://github.com/user-attachments/assets/04e8110f-d050-428f-97b6-5ccc7986175a" />
+
+<img width="1271" height="1260" alt="image" src="https://github.com/user-attachments/assets/3cbf1633-3bc0-46f0-80d1-202809197b8b" />
+
+- 当前计划卡片:多行标题、已执行 / 剩余时间、进度环、颜色条、图标
+- 加时 / 减时、撤销、超时显示、位置预设与布局模式
 
 ### 📱 平台特性
 - **Android**:沉浸式全屏、陀螺仪自动横竖屏、横屏锁定按钮、帧率变化省电(标准模式无操作自动降频,触摸恢复)
 - **Windows**:默认窗口模式,`F11` / `ESC` 切换全屏,右上角全屏按钮(无操作自动隐藏)
 
-## 📦 安装包
+---
 
-### Android
-| 文件 | 架构 | 说明 |
-| --- | --- | --- |
-| `FullscreenClock_1.0.0_arm64-v8a.apk` | arm64-v8a | 64 位 ARM 设备(推荐) |
-| `FullscreenClock_1.0.0_armeabi-v7a.apk` | armeabi-v7a | 32 位 ARM 旧设备 |
-| `FullscreenClock_1.0.0_x86_64.apk` | x86_64 | x86_64 模拟器 |
-| `FullscreenClock_1.0.0_all-abi.apk` | 全 ABI | 通用包 |
+## 📂 仓库结构
 
-### Windows (x64)
-- `FullscreenClock_1.0.0_windows-x64_setup.exe` — 标准安装向导(开始菜单 / 桌面快捷方式)
-- `FullscreenClock_1.0.0_windows-x64.zip` — 免安装便携版,解压即用
+```
+FullscreenClock/
+├── 1.0.0/          v1.0.0 源码(纯全屏时钟)
+├── 1.2.0/          v1.2.0 源码(时钟 + 计划管理,含 skill/ AI 生成)
+└── Releases       各版本安装包(APK + Windows 安装版 / 便携版)
+```
 
-## 🚀 快速开始
-- **Android**:安装对应 ABI 的 APK 后打开,即为全屏时钟;点击屏幕进入设置
-- **Windows**:运行 `fullscreen_clock.exe`,按 `F11` 进入全屏,`ESC` 退出
+每个版本目录均为**完整可重建的 Flutter 工程**(`lib/`、`android/`、`windows/`、`assets/`、`test/`)。
 
-## ⚙️ 设置项一览
-| 分组 | 设置项 |
-| --- | --- |
-| 显示模式 | 时钟模式(标准 / 圆盘) |
-| 外观 | 明暗模式、主题配色方案、自定义配色 |
-| 时钟设置 | 字体、字体颜色、背景颜色、字体粗细、时钟缩放 |
-| 圆盘表盘 | 表盘样式、圆盘缩放 |
-| 时间 | 24 小时制、显示秒 |
-| 其他 | 屏幕常亮、配色参考 |
+---
 
-## 🧱 技术栈
-- **框架**:Flutter 3.47 / Dart 3.13
-- **依赖**:`shared_preferences`(设置持久化)、`wakelock_plus`(屏幕常亮)、`window_manager`(Windows 全屏)、`url_launcher`、`file_selector`、`path_provider`、`package_info_plus`
-- **平台能力**:Android 沉浸式、MethodChannel(刷新率 / 方向)、Windows 全屏窗口
+## 📥 下载与安装
+
+请前往 **[Releases](https://github.com/iop666/FullscreenClock/releases)** 下载对应版本:
+
+- **Android**:按设备架构选择 APK
+  - `arm64-v8a`(64 位,推荐)· `armeabi-v7a`(32 位旧机)· `x86_64`(模拟器)· `all-abi`(通用)
+- **Windows (x64)**
+  - `windows-x64_setup.exe` — 安装版(Inno Setup),自动安装并创建快捷方式
+  - `windows-x64.zip` — 便携版,解压即用
+
+---
 
 ## 🔨 从源码构建
+
 ```bash
 flutter pub get
-
-# Android release(按 ABI 拆分 + 混淆)
-flutter build apk --release --split-per-abi --obfuscate --split-debug-info=build/symbols
-
-# Windows release
-flutter build windows --release
+flutter build apk --release --split-per-abi   # Android
+flutter build windows --release               # Windows
 ```
+
 > 国内网络建议配置镜像:
 > ```
 > PUB_HOSTED_URL=https://pub.flutter-io.cn
 > FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 > ```
 
-## 📁 项目结构
+## 🧪 测试
+```bash
+flutter analyze   # 0 issues
+flutter test      # 全部通过
 ```
-lib/
-├── main.dart                入口:加载设置与导入字体
-├── app.dart                 应用根组件
-├── models/                  设置数据模型
-├── providers/               状态管理(ChangeNotifier)
-├── screens/                 时钟显示页 / 设置页
-├── services/                窗口、方向、字体、刷新率服务
-├── theme/                   配色方案解析
-├── utils/                   时间格式化
-└── widgets/                 标准时钟 / 圆盘时钟
-```
+
+---
+
+## 🧱 技术栈
+
+- **框架**:Flutter 3.47 / Dart 3.13
+- **状态管理**:原生 `ChangeNotifier` + `ListenableBuilder`(无第三方状态管理)
+- **主要依赖**:`shared_preferences`、`wakelock_plus`、`window_manager`、`flutter_local_notifications`、`url_launcher`、`file_selector`、`path_provider`、`package_info_plus`、`flutter_localizations`
+- **平台能力**:Android 沉浸式 / 通知 / 前台服务 / 精确闹钟 / MethodChannel,Windows 全屏窗口
+
+---
 
 ## 📄 许可证
-本项目基于 MIT 许可证发布。
 
-## 🙏 字体声明
-- **HarmonyOS Sans**：版权 © 2021 华为终端有限公司。
-- **MiSans**：版权 © 小米科技有限责任公司。
+本项目基于 **MIT** 许可证发布。
+
+## 🙏 致谢
+
+- 配色灵感参考 [zhongguose.com](https://zhongguose.com)
+- 内置字体版权归原厂商所有,官方许可协议随源码附于 `assets/fonts/`:
+  - **HarmonyOS Sans**(华为 · HarmonyOS Sans Fonts License Agreement)
+  - **MiSans**(小米 · MiSans Font Intellectual Property License Agreement)
