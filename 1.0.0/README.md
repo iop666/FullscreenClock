@@ -1,20 +1,39 @@
-# Fullscreen Clock 全屏时钟
+# FullscreenClock
+全屏时钟
 
 一个专注于查看时间的极简全屏时钟应用。支持 **Android** 与 **Windows (x64)**,提供标准数字时钟与圆盘(表盘)时钟,深/浅主题、丰富配色、多字体与沉浸式全屏体验。
 
 ## ✨ 功能特性
 
 ### 🕐 时钟
+
+<img width="2181" height="1094" alt="image" src="https://github.com/user-attachments/assets/96e75770-519d-47e2-94e1-9a4cccdda551" />
+
+<img width="1387" height="757" alt="image" src="https://github.com/user-attachments/assets/19d23182-e964-40c3-911f-5e2283bbe0c2" />
+
+<img width="2044" height="984" alt="image" src="https://github.com/user-attachments/assets/84e53d84-2fd6-40af-a48c-54d75ecd111e" />
+
 - **标准数字时钟** — 超大字号,支持 12/24 小时制、AM/PM 标记、显示秒
+
+<img width="1664" height="1331" alt="image" src="https://github.com/user-attachments/assets/e67b789c-e6ec-476f-a1d4-f4d927e522a0" />
+
+<img width="1667" height="1332" alt="image" src="https://github.com/user-attachments/assets/41dd7a6a-12c9-493f-a650-c75bf2429dc4" />
+
 - **圆盘时钟** — 极简 / 经典 / 罗马数字 / 圆点四种表盘样式,支持独立缩放
 
 ### 🎨 主题与配色
+
+<img width="1082" height="952" alt="image" src="https://github.com/user-attachments/assets/928fcf15-6f1c-4478-b49a-fbeb96417229" />
+
 - 明暗模式:**白天 / 黑夜 / 跟随系统**
 - 内置 **6 套配色方案**:经典、墨蓝、翡翠、暖阳、紫罗兰、中国红
 - **自定义配色**:背景 / 文字 / 强调三色自由组合,最多保存 10 套
 - 字体颜色、背景颜色可独立自定义,白天与黑夜分别设置
 
 ### 🔤 字体
+
+<img width="1080" height="1124" alt="image" src="https://github.com/user-attachments/assets/b78f67cf-1ff2-4ba0-a036-0fb4cf6d5e33" />
+
 - 内置 **5 类字体**:默认、等宽、衬线、HarmonyOS Sans、MiSans
 - 支持 **运行时导入** .ttf / .otf 自定义字体,无需重新编译
 
@@ -93,8 +112,6 @@ lib/
 ## 📄 许可证
 本项目基于 MIT 许可证发布。
 
-## 🙏 致谢
-- 配色灵感参考 [zhongguose.com](https://zhongguose.com)
-- 内置字体版权归原厂商所有,官方许可协议随源码附于 `assets/fonts/` 下:
-  - **HarmonyOS Sans**(华为,HarmonyOS Sans Fonts License Agreement,见 `assets/fonts/HarmonyOS_Sans/LICENSE`)
-  - **MiSans**(小米,MiSans Font Intellectual Property License Agreement,见 `assets/fonts/MiSans/LICENSE`)
+## 🙏 字体声明
+- **HarmonyOS Sans**：版权 © 2021 华为终端有限公司。
+- **MiSans**：版权 © 小米科技有限责任公司。
